@@ -1,10 +1,47 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import LoginPage from './LoginPage.jsx'
+import SignUp from './SignUp.jsx'
+import HomePage from './HomePage.jsx'
+import UserInfoPage from './UserInfo.jsx'
+import Acommadations from './Acommadations.jsx'
+import MyPins from './MyPins.jsx'
 import './index.css'
+import '../firebase.js'
+import {createHashRouter, RouterProvider} from "react-router-dom";
+
+const router = createHashRouter([
+  {
+    path: "",
+    element: <App/>
+  },
+  {
+    path: "/login",
+    element: <LoginPage/>
+  },
+  {
+    path: "/signup",
+    element: <SignUp/>
+  },
+  {
+    path: "/userinfo",
+    element: <UserInfoPage/>
+  },
+  {
+    path: "/acommadations",
+    element: <Acommadations/>
+  },
+  {
+    path: "/mypins",
+    element: <MyPins/>
+  },
+  {
+    path: "/homepage",
+    element: <HomePage/>
+  }
+])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <RouterProvider router={router} />
 )
