@@ -25,9 +25,7 @@ function App() {
       <UserInfo />
       <h2>_____________________________</h2>
       // Accomadations Page
-      <Acommadations />
       <h2>_____________________________ </h2>
-      <MyComponent />
 
 
       
