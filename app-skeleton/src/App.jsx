@@ -4,13 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import HomePage from './HomePage';
 import UserInfo from './UserInfo';
-import Acommadations from './Acommadations';
-import MyComponent from './components/button.icon/home.icon.button';
 
 import React from 'react';
 import LoginPage from './LoginPage';
 
-import Fr from '../fr.input/fr';
 
 function App() {
   return (

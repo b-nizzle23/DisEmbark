@@ -2,6 +2,11 @@
     margin: 0;
 }
 
+#root {
+    height: 600px;
+    width: 900px;
+}
+
 img {
     width: 80%;
 }

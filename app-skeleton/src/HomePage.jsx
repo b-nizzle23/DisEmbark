@@ -6,7 +6,10 @@ function HomePage() {
     <div>
       <h2>Welcome to Our Website!</h2>
       <p>This is the homepage of our app.</p>
-      <img src={homepageImage} alt="Homepage" className='Picture'/>
+      <div>
+        <img src={homepageImage} alt="Homepage" className='Picture'/>
+        
+      </div>
     </div>
   );
 }
