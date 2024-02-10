@@ -1,0 +1,10 @@
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .icon {
+    font-family: 'Material Symbols Outlined';
+    font-size: 24px; /* Adjust size as needed */
+  }
