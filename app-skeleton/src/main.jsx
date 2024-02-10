@@ -5,10 +5,9 @@ import LoginPage from './LoginPage.jsx'
 import SignUp from './SignUp.jsx'
 import HomePage from './HomePage.jsx'
 import UserInfoPage from './UserInfo.jsx'
-import Acommadations from './Acommadations.jsx'
 import MyPins from './MyPins.jsx'
 import './index.css'
-import '../firebase.js'
+import './firebase.js'
 import {createHashRouter, RouterProvider} from "react-router-dom";
 
 const router = createHashRouter([
@@ -27,10 +26,6 @@ const router = createHashRouter([
   {
     path: "/userinfo",
     element: <UserInfoPage/>
-  },
-  {
-    path: "/acommadations",
-    element: <Acommadations/>
   },
   {
     path: "/mypins",
