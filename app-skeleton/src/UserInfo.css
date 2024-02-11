@@ -1,0 +1,57 @@
+/* Style for the close button */
+button.material-symbols-outlined {
+    position: absolute;
+    top: 10px; /* Adjust this value for desired vertical position */
+    left: 10px; /* Adjust this value for desired horizontal position */
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Style for the user info container */
+  div {
+    padding: 20px;
+  }
+  
+  /* Style for the user-pic-name */
+  .user-pic-name {
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the menu */
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Style for each menu item */
+  .menu div {
+    border-top: 1px solid #000; /* Add a border line above each menu item */
+    padding: 10px 0;
+  }
+  
+  /* Style for the links inside the menu */
+  .menu div a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  /* Style for the logout button */
+  .logout button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .logout {
+    border-top: 1px solid #000; /* Add a border line above each menu item */
+    padding: 10px 0;
+  }
+
+  /* Style for the account_circle icon */
+  .user-pic-name .material-symbols-outlined {
+    font-size: 24px; /* Adjust the size as needed */
+    margin-right: 10px; /* Add space between the icon and the email */
+  }
+  
