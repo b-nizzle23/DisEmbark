@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import homepageimage from './homepage-image.jpg'; // Corrected import statement
 import Pin from './Pin';
 import './MapPage.css';
+import NavBar from './Nav';
 
 function MapPage() {
     const imageRef = useRef(null);
@@ -17,6 +18,8 @@ function MapPage() {
                     className="Picture"
                 />
                 <Pin imageRef={imageRef} />
+
+                <NavBar/>
             </div>
         </div>
     );

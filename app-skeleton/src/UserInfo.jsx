@@ -11,7 +11,7 @@ function UserInfoPage() {
   const navigate = useNavigate();
 
   function handleLogOut(e) {
-    auth.signOut;
+    auth.signOut();
     return navigate("/homepage");
   }
 
@@ -19,6 +19,11 @@ function UserInfoPage() {
     // holder value
     return navigate("/homepage");
   }
+
+  function nullHandle()  {
+
+  }
+
 
   return (
     <>
@@ -32,7 +37,7 @@ function UserInfoPage() {
         <span className="material-symbols-outlined">
         account_circle
         </span> 
-        <span div="user-email">{auth.currentUser.email}</span>
+        <span div="user-email">{auth.currentUser ? auth.currentUser.email : ""}</span>
       </div>
       <div className="menu">
         <div className='mypins'><Link to="/mypins" className="my-pins">My Pins</Link></div>

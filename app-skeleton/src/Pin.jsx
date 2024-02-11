@@ -101,8 +101,12 @@ export default function Pin({ imageRef }) {
     }
 
     return () => {
-      imageRef.current.removeEventListener('load', handleImageLoad);
-      window.removeEventListener('resize', handleCanvasResize);
+      // imageRef.current.removeEventListener('load', handleImageLoad);
+      // window.removeEventListener('resize', handleCanvasResize);
+      if (imageRef?.current) {
+        imageRef.current.removeEventListener('load', handleImageLoad)
+      }
+      window.removeEventListener('resize', handleCanvasResize)
     };
   }, [pins]);
 
