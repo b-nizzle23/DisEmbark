@@ -50,7 +50,11 @@ const router = createHashRouter([
   {
     path: "/mappage",
     element: <MapPage/>
-  }
+  },
+  // {
+  //   path: "/addpin",
+  //   element: <AddPin/>
+  // },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
