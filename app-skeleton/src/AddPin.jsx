@@ -22,12 +22,7 @@ export default function AddPinPage() {
         "LGBTQ+",
       ];
 
-      // const items = [];
-      // for (let i = 0; i < data.length; i++) {
-      //   items.push(<option key={i} value={data[i]}> {data[i]} </option>);
-      // }
-      // return items;
-
+      
       return data.map((item, index) => (
         <option key={index} value={item}>{item}</option>
     ));
@@ -42,12 +37,15 @@ export default function AddPinPage() {
 
 
       <div>Here is where to add Pins</div>
+      
       <select name="Accomodations" value={selectedOption} onChange={handleSelectChange}>
         <option value="">Select an option</option>
         {renderItems()}
       </select>
 
-      
+      <h3>Form submission for Firebase:</h3>
+
+
 
 
     </>
