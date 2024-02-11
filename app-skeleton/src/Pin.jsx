@@ -12,6 +12,21 @@ const pins = [
   { id: '9163', category: 'Sensory', coordinates: [70,50], descr: 'quiet...'},
 ];
 
+// const pins = async function getPinsByTag(Sensory) {
+//   try {
+//       const pinsRef = firestore.collection('pin');
+//       const querySnapshot = await pinsRef.where('tag', '==', tag).get();
+//       const pins = [];
+//       querySnapshot.forEach(doc => {
+//           pins.push({ id: doc.id, category: doc.type, xy: doc.coordinates, ...doc.data() });
+//       });
+//       return pins;
+//   } catch (error) {
+//       console.error('Error fetching pins by tag:', error);
+//       return [];
+//   }
+// }
+
 const Pin = ({ imageRef }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const canvasRef = useRef(null);

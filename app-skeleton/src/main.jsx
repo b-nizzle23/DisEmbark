@@ -10,7 +10,9 @@ import Requests from './RequestPage.jsx'
 import AccoutSettings from './Settings.jsx'
 import './index.css'
 import './firebase.js'
+import './MapPage.jsx'
 import {createHashRouter, RouterProvider} from "react-router-dom";
+import MapPage from './MapPage.jsx'
 
 const router = createHashRouter([
   {
@@ -44,6 +46,10 @@ const router = createHashRouter([
   {
     path: "/settings",
     element: <AccoutSettings/>
+  },
+  {
+    path: "/mappage",
+    element: <MapPage/>
   }
 ])
 

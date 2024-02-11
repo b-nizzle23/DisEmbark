@@ -21,7 +21,7 @@ export default function LoginPage() {
   function handleSubmit() {
     signInWithEmailAndPassword(getAuth(), email, password)
     .then(cred => {
-      return navigate("/userinfo");
+      return navigate("/mappage");
     })
     .catch((err) => {
       alert(err)
@@ -29,7 +29,7 @@ export default function LoginPage() {
   }
 
   if (toDashboard === true) {
-    return <Navigate to="/userindo"/>;
+    return <Navigate to="/mappage"/>;
   }
 
 
