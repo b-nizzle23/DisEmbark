@@ -1,3 +1,4 @@
+@layer base, special;
 .body {
     margin: 0;
 }
@@ -9,4 +10,16 @@
 
 img {
     width: 75%;
+}
+
+.layer {
+    background-image: url("homepage-image.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
 }

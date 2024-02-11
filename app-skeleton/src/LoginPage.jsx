@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import 'firebaseui/dist/firebaseui.css';
 import {getAuth, signInWithEmailAndPassword } from 'firebase/auth'; 
 import './LoginPage.css'
@@ -6,6 +7,8 @@ import './LoginPage.css'
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [toDashboard, setToDashboard] = useState(false);
+  const navigate = useNavigate();
 
   function handleEmail(e) {
     setEmail(e.target.value)
@@ -18,11 +21,15 @@ export default function LoginPage() {
   function handleSubmit() {
     signInWithEmailAndPassword(getAuth(), email, password)
     .then(cred => {
-      console.log(cred)
+      return navigate("/userinfo");
     })
     .catch((err) => {
       alert(err)
     })
+  }
+
+  if (toDashboard === true) {
+    return <Navigate to="/userindo"/>;
   }
 
 
