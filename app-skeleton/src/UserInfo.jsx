@@ -37,6 +37,7 @@ function UserInfoPage() {
       <div className="menu">
         <div className='mypins'><Link to="/mypins" className="my-pins">My Pins</Link></div>
         <div className='settings'><Link to="/settings">Account Settings</Link></div>
+        <div className="requests"><Link to="/requests">Submit a Request</Link></div>
         <div className='logout'><button onClick={handleLogOut}>Log Out</button></div>
       </div>
 
