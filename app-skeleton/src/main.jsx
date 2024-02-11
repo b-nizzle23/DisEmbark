@@ -13,6 +13,7 @@ import './firebase.js'
 import './MapPage.jsx'
 import {createHashRouter, RouterProvider} from "react-router-dom";
 import MapPage from './MapPage.jsx'
+import CreationPage from './CreationPage.jsx'
 
 const router = createHashRouter([
   {
@@ -50,6 +51,10 @@ const router = createHashRouter([
   {
     path: "/mappage",
     element: <MapPage/>
+  },
+  {
+    path: "/creationpage",
+    element: <CreationPage/>
   },
   // {
   //   path: "/addpin",
