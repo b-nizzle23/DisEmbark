@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import HomePage from './HomePage';
 import UserInfo from './UserInfo';
+import { Link } from 'react-router-dom';
+
 
 import React from 'react';
 import LoginPage from './LoginPage';
@@ -20,6 +22,9 @@ function App() {
       <h2>_____________________________</h2>
       // Home Page 
       <HomePage />
+      <Link to="/addpin" className="add-pin LinkButton">
+        <span>Add Pins</span>
+      </Link>
       <h2>_____________________________</h2>
       // User info Page
       <UserInfo />

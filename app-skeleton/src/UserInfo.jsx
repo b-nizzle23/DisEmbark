@@ -7,7 +7,7 @@ function UserInfoPage() {
       <h2>User Info Page</h2>
       <div className="menu">
         <ul>
-          <Link to="/mypins" className="my-pins">My Pins</Link>
+          <Link to="/mypins" className="my-pins LinkButton">My Pins</Link>
           <li><a href="#request-feature">Request Feature</a></li>
           <li><a href="#my-pins">My Pins</a></li>
         </ul>
