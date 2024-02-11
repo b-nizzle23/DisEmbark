@@ -1,5 +1,4 @@
 import React from 'react';
-import homepageImage from './homepage-image.jpg'; // Import the image file
 import './HomePage.css'
 import LoginPage from './LoginPage';
 
