@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import homepageimage from './homepage-image.jpg'; // Corrected import statement
 import Pin from './Pin';
+import './MapPage.css';
 
 function MapPage() {
     const imageRef = useRef(null);

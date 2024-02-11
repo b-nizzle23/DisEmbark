@@ -5,7 +5,7 @@
 import { getDocs, collection } from 'firebase/firestore';
 import { db } from "./firebase"
 import React, { useEffect, useRef, useState } from 'react';
-
+import "./Pin.css";
 
 
 export default function Pin({ imageRef }) {
@@ -36,8 +36,12 @@ export default function Pin({ imageRef }) {
     const context = canvas.getContext('2d');
 
     function drawPins() {
+      const canvas = canvasRef.current;
+      const context = canvas.getContext('2d');
+
       const image = imageRef.current;
       context.clearRect(0, 0, canvas.width, canvas.height);
+
       pins.forEach(pin => {
         const [x, y] = pin.coordinates;
         let pinColor;
@@ -57,8 +61,20 @@ export default function Pin({ imageRef }) {
         }
         const adjustedX = (x / image.naturalWidth) * image.width;
         const adjustedY = (y / image.naturalHeight) * image.height;
+        const pinSize = 20; // Specify the size of the pin icon
+
+        // Draw circle for top part of pin
         context.beginPath();
-        context.arc(adjustedX, adjustedY, 20, 0, 2 * Math.PI); //Change these values to change the size of the pin
+        context.arc(adjustedX, adjustedY - pinSize / 4, pinSize / 4, 0, Math.PI * 2);
+        context.fillStyle = pinColor;
+        context.fill();
+
+        // Draw triangle for bottom part of pin
+        context.beginPath();
+        context.moveTo(adjustedX - pinSize / 4, adjustedY - 10 + pinSize / 8); // bottom left corner
+        context.lineTo(adjustedX + pinSize / 4, adjustedY - 10 + pinSize / 8); // bottom right corner
+        context.lineTo(adjustedX, adjustedY + pinSize / 2); // top middle
+        context.closePath();
         context.fillStyle = pinColor;
         context.fill();
       });
@@ -112,19 +128,22 @@ export default function Pin({ imageRef }) {
 
 
   return (
-    <canvas
-      ref={canvasRef}
-      width={imageRef?.current?.width || 0}
-      height={imageRef?.current?.height || 0}
-      style={{
-        position: 'absolute',
-        top: imageRef?.current?.offsetTop || 0,
-        left: imageRef?.current?.offsetLeft || 0,
-        pointerEvents: 'auto', // Allow clicks on canvas
-        visibility: imageLoaded ? 'visible' : 'hidden',
-      }}
-      onClick={handleCanvasClick}
-    />
+    <>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <canvas
+        ref={canvasRef}
+        width={imageRef?.current?.width || 0}
+        height={imageRef?.current?.height || 0}
+        style={{
+          position: 'absolute',
+          top: imageRef?.current?.offsetTop || 0,
+          left: imageRef?.current?.offsetLeft || 0,
+          pointerEvents: 'auto', // Allow clicks on canvas
+          visibility: imageLoaded ? 'visible' : 'hidden',
+        }}
+        onClick={handleCanvasClick}
+      />
+    </>
   );
 };
 
